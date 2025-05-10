@@ -1,0 +1,45 @@
+06:06:10.182 [I] Loaded norm stats from /home/alex/pi0_hack/assets/pi0_libero/your_hf_username/libero (1694428:config.py:179)
+Returning existing local_dir `/mnt/disks/persist/hf_cache/your_hf_username/libero` as remote repo cannot be accessed in `snapshot_download` (None).
+06:06:10.183 [W] Returning existing local_dir `/mnt/disks/persist/hf_cache/your_hf_username/libero` as remote repo cannot be accessed in `snapshot_download` (None). (1694428:_snapshot_download.py:213)
+Returning existing local_dir `/mnt/disks/persist/hf_cache/your_hf_username/libero` as remote repo cannot be accessed in `snapshot_download` (None).
+06:06:10.189 [W] Returning existing local_dir `/mnt/disks/persist/hf_cache/your_hf_username/libero` as remote repo cannot be accessed in `snapshot_download` (None). (1694428:_snapshot_download.py:213)
+Returning existing local_dir `/mnt/disks/persist/hf_cache/your_hf_username/libero` as remote repo cannot be accessed in `snapshot_download` (None).
+06:06:10.195 [W] Returning existing local_dir `/mnt/disks/persist/hf_cache/your_hf_username/libero` as remote repo cannot be accessed in `snapshot_download` (None). (1694428:_snapshot_download.py:213)
+Resolving data files: 100%|██████████████████████████████████████| 1693/1693 [00:00<00:00, 18179.29it/s]
+Loading dataset shards: 100%|█████████████████████████████████████████| 70/70 [00:00<00:00, 3885.72it/s]
+06:06:34.756 [I] Initialized data loader:
+[0].images['base_0_rgb']: (32, 224, 224, 3)@float32
+[0].images['left_wrist_0_rgb']: (32, 224, 224, 3)@float32
+[0].images['right_wrist_0_rgb']: (32, 224, 224, 3)@float32
+[0].image_masks['base_0_rgb']: (32,)@bool
+[0].image_masks['left_wrist_0_rgb']: (32,)@bool
+[0].image_masks['right_wrist_0_rgb']: (32,)@bool
+[0].state: (32, 32)@float32
+[0].tokenized_prompt: (32, 48)@int32
+[0].tokenized_prompt_mask: (32, 48)@bool
+[1]: (32, 50, 32)@float32 (1694428:train.py:227)
+06:06:36.473 [I] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None (1694428:base_pytree_checkpoint_handler.py:332)
+06:06:36.498 [I] Restoring checkpoint from /home/alex/.cache/openpi/openpi-assets/checkpoints/pi0_base/params. (1694428:checkpointer.py:256)
+06:06:42.390 [I] [process=0] /jax/checkpoint/read/bytes_per_sec: 2.0 GiB/s (total bytes: 12.1 GiB) (time elapsed: 5 seconds) (per-host) (1694428:base_pytree_checkpoint_handler.py:113)
+06:06:42.391 [I] Finished restoring checkpoint from /home/alex/.cache/openpi/openpi-assets/checkpoints/pi0_base/params. (1694428:checkpointer.py:259)
+06:06:42.391 [I] [process=0][thread=MainThread] Skipping global process sync, barrier name: Checkpointer:restore (1694428:multihost.py:293)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/alex/pi0_hack/scripts/train.py", line 273, in <module>
+    main(_config.cli())
+  File "/home/alex/pi0_hack/scripts/train.py", line 229, in main
+    train_state, train_state_sharding = init_train_state(config, init_rng, mesh, resume=resuming)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/pi0_hack/.venv/lib/python3.11/site-packages/jaxtyping/_decorator.py", line 559, in wrapped_fn
+    return wrapped_fn_impl(args, kwargs, bound, memos)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/pi0_hack/.venv/lib/python3.11/site-packages/jaxtyping/_decorator.py", line 483, in wrapped_fn_impl
+    out = fn(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/pi0_hack/scripts/train.py", line 125, in init_train_state
+    train_state = jax.jit(
+                  ^^^^^^^^
+jaxlib.xla_extension.XlaRuntimeError: RESOURCE_EXHAUSTED: Error allocating device buffer: Attempting to allocate 4.50G. That was not possible. There are 2.15G free.; (1x0x0_HBM0): while running replica 0 and partition 0 of a replicated computation (other replicas may have failed as well).
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.

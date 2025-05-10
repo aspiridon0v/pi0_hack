@@ -1,0 +1,196 @@
+06:11:45.979 [I] Loaded norm stats from /home/alex/pi0_hack/assets/pi0_libero/your_hf_username/libero (1709500:config.py:179)
+Returning existing local_dir `/mnt/disks/persist/hf_cache/your_hf_username/libero` as remote repo cannot be accessed in `snapshot_download` (None).
+06:11:45.980 [W] Returning existing local_dir `/mnt/disks/persist/hf_cache/your_hf_username/libero` as remote repo cannot be accessed in `snapshot_download` (None). (1709500:_snapshot_download.py:213)
+Returning existing local_dir `/mnt/disks/persist/hf_cache/your_hf_username/libero` as remote repo cannot be accessed in `snapshot_download` (None).
+06:11:45.986 [W] Returning existing local_dir `/mnt/disks/persist/hf_cache/your_hf_username/libero` as remote repo cannot be accessed in `snapshot_download` (None). (1709500:_snapshot_download.py:213)
+Returning existing local_dir `/mnt/disks/persist/hf_cache/your_hf_username/libero` as remote repo cannot be accessed in `snapshot_download` (None).
+06:11:45.992 [W] Returning existing local_dir `/mnt/disks/persist/hf_cache/your_hf_username/libero` as remote repo cannot be accessed in `snapshot_download` (None). (1709500:_snapshot_download.py:213)
+Resolving data files: 100%|█████████████████████████████████████| 1693/1693 [00:00<00:00, 122373.32it/s]
+Loading dataset shards: 100%|█████████████████████████████████████████| 70/70 [00:00<00:00, 3454.38it/s]
+06:12:10.080 [I] Initialized data loader:
+[0].images['base_0_rgb']: (4, 224, 224, 3)@float32
+[0].images['left_wrist_0_rgb']: (4, 224, 224, 3)@float32
+[0].images['right_wrist_0_rgb']: (4, 224, 224, 3)@float32
+[0].image_masks['base_0_rgb']: (4,)@bool
+[0].image_masks['left_wrist_0_rgb']: (4,)@bool
+[0].image_masks['right_wrist_0_rgb']: (4,)@bool
+[0].state: (4, 32)@float32
+[0].tokenized_prompt: (4, 48)@int32
+[0].tokenized_prompt_mask: (4, 48)@bool
+[1]: (4, 50, 32)@float32 (1709500:train.py:227)
+06:12:11.675 [I] Sharding .params['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_0']['kernel'].value of shape (27, 1152, 4304) (510.68 MiB) along axis 2 (1709500:sharding.py:89)
+06:12:11.675 [I] Sharding .params['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_1']['kernel'].value of shape (27, 4304, 1152) (510.68 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.675 [I] Sharding .params['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['key']['kernel'].value of shape (27, 1152, 16, 72) (136.69 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.675 [I] Sharding .params['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['out']['kernel'].value of shape (27, 16, 72, 1152) (136.69 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.676 [I] Sharding .params['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['query']['kernel'].value of shape (27, 1152, 16, 72) (136.69 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.676 [I] Sharding .params['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['value']['kernel'].value of shape (27, 1152, 16, 72) (136.69 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.676 [I] Sharding .params['PaliGemma']['img']['head']['kernel'].value of shape (1152, 2048) (9.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.676 [I] Sharding .params['PaliGemma']['llm']['embedder']['input_embedding'].value of shape (257152, 2048) (2009.00 MiB) along axis 0 (1709500:sharding.py:89)
+06:12:11.676 [I] Sharding .params['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum']['w'].value of shape (18, 8, 256, 2048) (288.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.676 [I] Sharding .params['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum_1']['w'].value of shape (18, 8, 256, 1024) (144.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.676 [I] Sharding .params['PaliGemma']['llm']['layers']['attn']['kv_einsum']['w'].value of shape (18, 2, 1, 2048, 256) (72.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.677 [I] Sharding .params['PaliGemma']['llm']['layers']['attn']['kv_einsum_1']['w'].value of shape (18, 2, 1, 1024, 256) (36.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.677 [I] Sharding .params['PaliGemma']['llm']['layers']['attn']['q_einsum']['w'].value of shape (18, 8, 2048, 256) (288.00 MiB) along axis 2 (1709500:sharding.py:89)
+06:12:11.677 [I] Sharding .params['PaliGemma']['llm']['layers']['attn']['q_einsum_1']['w'].value of shape (18, 8, 1024, 256) (144.00 MiB) along axis 2 (1709500:sharding.py:89)
+06:12:11.677 [I] Sharding .params['PaliGemma']['llm']['layers']['mlp']['gating_einsum'].value of shape (18, 2, 2048, 16384) (4608.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.677 [I] Sharding .params['PaliGemma']['llm']['layers']['mlp']['linear'].value of shape (18, 16384, 2048) (2304.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.677 [I] Sharding .params['PaliGemma']['llm']['layers']['mlp_1']['gating_einsum'].value of shape (18, 2, 1024, 4096) (576.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.677 [I] Sharding .params['PaliGemma']['llm']['layers']['mlp_1']['linear'].value of shape (18, 4096, 1024) (288.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.678 [I] Sharding .params['action_time_mlp_in']['kernel'].value of shape (2048, 1024) (8.00 MiB) along axis 0 (1709500:sharding.py:89)
+06:12:11.678 [I] Sharding .params['action_time_mlp_out']['kernel'].value of shape (1024, 1024) (4.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.678 [I] Sharding .opt_state[1][0].mu['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_0']['kernel'].value of shape (27, 1152, 4304) (510.68 MiB) along axis 2 (1709500:sharding.py:89)
+06:12:11.678 [I] Sharding .opt_state[1][0].mu['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_1']['kernel'].value of shape (27, 4304, 1152) (510.68 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.678 [I] Sharding .opt_state[1][0].mu['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['key']['kernel'].value of shape (27, 1152, 16, 72) (136.69 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.679 [I] Sharding .opt_state[1][0].mu['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['out']['kernel'].value of shape (27, 16, 72, 1152) (136.69 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.679 [I] Sharding .opt_state[1][0].mu['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['query']['kernel'].value of shape (27, 1152, 16, 72) (136.69 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.679 [I] Sharding .opt_state[1][0].mu['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['value']['kernel'].value of shape (27, 1152, 16, 72) (136.69 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.679 [I] Sharding .opt_state[1][0].mu['PaliGemma']['img']['head']['kernel'].value of shape (1152, 2048) (9.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.679 [I] Sharding .opt_state[1][0].mu['PaliGemma']['llm']['embedder']['input_embedding'].value of shape (257152, 2048) (2009.00 MiB) along axis 0 (1709500:sharding.py:89)
+06:12:11.679 [I] Sharding .opt_state[1][0].mu['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum']['w'].value of shape (18, 8, 256, 2048) (288.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.680 [I] Sharding .opt_state[1][0].mu['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum_1']['w'].value of shape (18, 8, 256, 1024) (144.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.680 [I] Sharding .opt_state[1][0].mu['PaliGemma']['llm']['layers']['attn']['kv_einsum']['w'].value of shape (18, 2, 1, 2048, 256) (72.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.680 [I] Sharding .opt_state[1][0].mu['PaliGemma']['llm']['layers']['attn']['kv_einsum_1']['w'].value of shape (18, 2, 1, 1024, 256) (36.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.680 [I] Sharding .opt_state[1][0].mu['PaliGemma']['llm']['layers']['attn']['q_einsum']['w'].value of shape (18, 8, 2048, 256) (288.00 MiB) along axis 2 (1709500:sharding.py:89)
+06:12:11.680 [I] Sharding .opt_state[1][0].mu['PaliGemma']['llm']['layers']['attn']['q_einsum_1']['w'].value of shape (18, 8, 1024, 256) (144.00 MiB) along axis 2 (1709500:sharding.py:89)
+06:12:11.680 [I] Sharding .opt_state[1][0].mu['PaliGemma']['llm']['layers']['mlp']['gating_einsum'].value of shape (18, 2, 2048, 16384) (4608.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.680 [I] Sharding .opt_state[1][0].mu['PaliGemma']['llm']['layers']['mlp']['linear'].value of shape (18, 16384, 2048) (2304.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.681 [I] Sharding .opt_state[1][0].mu['PaliGemma']['llm']['layers']['mlp_1']['gating_einsum'].value of shape (18, 2, 1024, 4096) (576.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.681 [I] Sharding .opt_state[1][0].mu['PaliGemma']['llm']['layers']['mlp_1']['linear'].value of shape (18, 4096, 1024) (288.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.681 [I] Sharding .opt_state[1][0].mu['action_time_mlp_in']['kernel'].value of shape (2048, 1024) (8.00 MiB) along axis 0 (1709500:sharding.py:89)
+06:12:11.681 [I] Sharding .opt_state[1][0].mu['action_time_mlp_out']['kernel'].value of shape (1024, 1024) (4.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.681 [I] Sharding .opt_state[1][0].nu['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_0']['kernel'].value of shape (27, 1152, 4304) (510.68 MiB) along axis 2 (1709500:sharding.py:89)
+06:12:11.682 [I] Sharding .opt_state[1][0].nu['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_1']['kernel'].value of shape (27, 4304, 1152) (510.68 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.682 [I] Sharding .opt_state[1][0].nu['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['key']['kernel'].value of shape (27, 1152, 16, 72) (136.69 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.682 [I] Sharding .opt_state[1][0].nu['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['out']['kernel'].value of shape (27, 16, 72, 1152) (136.69 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.682 [I] Sharding .opt_state[1][0].nu['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['query']['kernel'].value of shape (27, 1152, 16, 72) (136.69 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.682 [I] Sharding .opt_state[1][0].nu['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['value']['kernel'].value of shape (27, 1152, 16, 72) (136.69 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.682 [I] Sharding .opt_state[1][0].nu['PaliGemma']['img']['head']['kernel'].value of shape (1152, 2048) (9.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.683 [I] Sharding .opt_state[1][0].nu['PaliGemma']['llm']['embedder']['input_embedding'].value of shape (257152, 2048) (2009.00 MiB) along axis 0 (1709500:sharding.py:89)
+06:12:11.683 [I] Sharding .opt_state[1][0].nu['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum']['w'].value of shape (18, 8, 256, 2048) (288.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.683 [I] Sharding .opt_state[1][0].nu['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum_1']['w'].value of shape (18, 8, 256, 1024) (144.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.683 [I] Sharding .opt_state[1][0].nu['PaliGemma']['llm']['layers']['attn']['kv_einsum']['w'].value of shape (18, 2, 1, 2048, 256) (72.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.683 [I] Sharding .opt_state[1][0].nu['PaliGemma']['llm']['layers']['attn']['kv_einsum_1']['w'].value of shape (18, 2, 1, 1024, 256) (36.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.683 [I] Sharding .opt_state[1][0].nu['PaliGemma']['llm']['layers']['attn']['q_einsum']['w'].value of shape (18, 8, 2048, 256) (288.00 MiB) along axis 2 (1709500:sharding.py:89)
+06:12:11.683 [I] Sharding .opt_state[1][0].nu['PaliGemma']['llm']['layers']['attn']['q_einsum_1']['w'].value of shape (18, 8, 1024, 256) (144.00 MiB) along axis 2 (1709500:sharding.py:89)
+06:12:11.684 [I] Sharding .opt_state[1][0].nu['PaliGemma']['llm']['layers']['mlp']['gating_einsum'].value of shape (18, 2, 2048, 16384) (4608.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.684 [I] Sharding .opt_state[1][0].nu['PaliGemma']['llm']['layers']['mlp']['linear'].value of shape (18, 16384, 2048) (2304.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.684 [I] Sharding .opt_state[1][0].nu['PaliGemma']['llm']['layers']['mlp_1']['gating_einsum'].value of shape (18, 2, 1024, 4096) (576.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.684 [I] Sharding .opt_state[1][0].nu['PaliGemma']['llm']['layers']['mlp_1']['linear'].value of shape (18, 4096, 1024) (288.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.684 [I] Sharding .opt_state[1][0].nu['action_time_mlp_in']['kernel'].value of shape (2048, 1024) (8.00 MiB) along axis 0 (1709500:sharding.py:89)
+06:12:11.684 [I] Sharding .opt_state[1][0].nu['action_time_mlp_out']['kernel'].value of shape (1024, 1024) (4.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.685 [I] Sharding .ema_params['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_0']['kernel'].value of shape (27, 1152, 4304) (510.68 MiB) along axis 2 (1709500:sharding.py:89)
+06:12:11.685 [I] Sharding .ema_params['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_1']['kernel'].value of shape (27, 4304, 1152) (510.68 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.685 [I] Sharding .ema_params['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['key']['kernel'].value of shape (27, 1152, 16, 72) (136.69 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.685 [I] Sharding .ema_params['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['out']['kernel'].value of shape (27, 16, 72, 1152) (136.69 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.685 [I] Sharding .ema_params['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['query']['kernel'].value of shape (27, 1152, 16, 72) (136.69 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.685 [I] Sharding .ema_params['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['value']['kernel'].value of shape (27, 1152, 16, 72) (136.69 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.686 [I] Sharding .ema_params['PaliGemma']['img']['head']['kernel'].value of shape (1152, 2048) (9.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.686 [I] Sharding .ema_params['PaliGemma']['llm']['embedder']['input_embedding'].value of shape (257152, 2048) (2009.00 MiB) along axis 0 (1709500:sharding.py:89)
+06:12:11.686 [I] Sharding .ema_params['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum']['w'].value of shape (18, 8, 256, 2048) (288.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.686 [I] Sharding .ema_params['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum_1']['w'].value of shape (18, 8, 256, 1024) (144.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.686 [I] Sharding .ema_params['PaliGemma']['llm']['layers']['attn']['kv_einsum']['w'].value of shape (18, 2, 1, 2048, 256) (72.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.686 [I] Sharding .ema_params['PaliGemma']['llm']['layers']['attn']['kv_einsum_1']['w'].value of shape (18, 2, 1, 1024, 256) (36.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.687 [I] Sharding .ema_params['PaliGemma']['llm']['layers']['attn']['q_einsum']['w'].value of shape (18, 8, 2048, 256) (288.00 MiB) along axis 2 (1709500:sharding.py:89)
+06:12:11.687 [I] Sharding .ema_params['PaliGemma']['llm']['layers']['attn']['q_einsum_1']['w'].value of shape (18, 8, 1024, 256) (144.00 MiB) along axis 2 (1709500:sharding.py:89)
+06:12:11.687 [I] Sharding .ema_params['PaliGemma']['llm']['layers']['mlp']['gating_einsum'].value of shape (18, 2, 2048, 16384) (4608.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.687 [I] Sharding .ema_params['PaliGemma']['llm']['layers']['mlp']['linear'].value of shape (18, 16384, 2048) (2304.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.687 [I] Sharding .ema_params['PaliGemma']['llm']['layers']['mlp_1']['gating_einsum'].value of shape (18, 2, 1024, 4096) (576.00 MiB) along axis 3 (1709500:sharding.py:89)
+06:12:11.687 [I] Sharding .ema_params['PaliGemma']['llm']['layers']['mlp_1']['linear'].value of shape (18, 4096, 1024) (288.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.687 [I] Sharding .ema_params['action_time_mlp_in']['kernel'].value of shape (2048, 1024) (8.00 MiB) along axis 0 (1709500:sharding.py:89)
+06:12:11.688 [I] Sharding .ema_params['action_time_mlp_out']['kernel'].value of shape (1024, 1024) (4.00 MiB) along axis 1 (1709500:sharding.py:89)
+06:12:11.716 [I] Created BasePyTreeCheckpointHandler: pytree_metadata_options=PyTreeMetadataOptions(support_rich_types=False), array_metadata_store=None (1709500:base_pytree_checkpoint_handler.py:332)
+06:12:11.740 [I] Restoring checkpoint from /home/alex/.cache/openpi/openpi-assets/checkpoints/pi0_base/params. (1709500:checkpointer.py:256)
+06:12:18.064 [I] [process=0] /jax/checkpoint/read/bytes_per_sec: 1.9 GiB/s (total bytes: 12.1 GiB) (time elapsed: 6 seconds) (per-host) (1709500:base_pytree_checkpoint_handler.py:113)
+06:12:18.065 [I] Finished restoring checkpoint from /home/alex/.cache/openpi/openpi-assets/checkpoints/pi0_base/params. (1709500:checkpointer.py:259)
+06:12:18.065 [I] [process=0][thread=MainThread] Skipping global process sync, barrier name: Checkpointer:restore (1709500:multihost.py:293)
+/home/alex/pi0_hack/.venv/lib/python3.11/site-packages/jax/_src/interpreters/mlir.py:1185: UserWarning: Some donated buffers were not usable: ShapedArray(float32[27,1152,4304]), ShapedArray(float32[27,4304,1152]), ShapedArray(float32[27,1152,16,72]), ShapedArray(float32[27,16,72,1152]), ShapedArray(float32[27,1152,16,72]), ShapedArray(float32[27,1152,16,72]), ShapedArray(float32[1152,2048]), ShapedArray(float32[257152,2048]), ShapedArray(float32[18,8,256,2048]), ShapedArray(float32[18,8,256,1024]), ShapedArray(float32[18,2,1,2048,256]), ShapedArray(float32[18,2,1,1024,256]), ShapedArray(float32[18,8,2048,256]), ShapedArray(float32[18,8,1024,256]), ShapedArray(float32[18,2,2048,16384]), ShapedArray(float32[18,16384,2048]), ShapedArray(float32[18,2,1024,4096]), ShapedArray(float32[18,4096,1024]), ShapedArray(float32[2048,1024]), ShapedArray(float32[1024,1024]).
+See an explanation at https://docs.jax.dev/en/latest/faq.html#buffer-donation.
+  warnings.warn("Some donated buffers were not usable:"
+06:12:26.183 [I] Initialized train state:
+['PaliGemma']['img']['Transformer']['encoder_norm']['bias'].value: (1152,)@float32
+['PaliGemma']['img']['Transformer']['encoder_norm']['scale'].value: (1152,)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['LayerNorm_0']['bias'].value: (27, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['LayerNorm_0']['scale'].value: (27, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['LayerNorm_1']['bias'].value: (27, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['LayerNorm_1']['scale'].value: (27, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_0']['bias'].value: (27, 4304)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_0']['kernel'].value: (27, 1152, 4304)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_1']['bias'].value: (27, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MlpBlock_0']['Dense_1']['kernel'].value: (27, 4304, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['key']['bias'].value: (27, 16, 72)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['key']['kernel'].value: (27, 1152, 16, 72)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['out']['bias'].value: (27, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['out']['kernel'].value: (27, 16, 72, 1152)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['query']['bias'].value: (27, 16, 72)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['query']['kernel'].value: (27, 1152, 16, 72)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['value']['bias'].value: (27, 16, 72)@float32
+['PaliGemma']['img']['Transformer']['encoderblock']['MultiHeadDotProductAttention_0']['value']['kernel'].value: (27, 1152, 16, 72)@float32
+['PaliGemma']['img']['embedding']['bias'].value: (1152,)@float32
+['PaliGemma']['img']['embedding']['kernel'].value: (14, 14, 3, 1152)@float32
+['PaliGemma']['img']['head']['bias'].value: (2048,)@float32
+['PaliGemma']['img']['head']['kernel'].value: (1152, 2048)@float32
+['PaliGemma']['img']['pos_embedding'].value: (1, 256, 1152)@float32
+['PaliGemma']['llm']['embedder']['input_embedding'].value: (257152, 2048)@float32
+['PaliGemma']['llm']['final_norm']['scale'].value: (2048,)@float32
+['PaliGemma']['llm']['final_norm_1']['scale'].value: (1024,)@float32
+['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum']['w'].value: (18, 8, 256, 2048)@float32
+['PaliGemma']['llm']['layers']['attn']['attn_vec_einsum_1']['w'].value: (18, 8, 256, 1024)@float32
+['PaliGemma']['llm']['layers']['attn']['kv_einsum']['w'].value: (18, 2, 1, 2048, 256)@float32
+['PaliGemma']['llm']['layers']['attn']['kv_einsum_1']['w'].value: (18, 2, 1, 1024, 256)@float32
+['PaliGemma']['llm']['layers']['attn']['q_einsum']['w'].value: (18, 8, 2048, 256)@float32
+['PaliGemma']['llm']['layers']['attn']['q_einsum_1']['w'].value: (18, 8, 1024, 256)@float32
+['PaliGemma']['llm']['layers']['mlp']['gating_einsum'].value: (18, 2, 2048, 16384)@float32
+['PaliGemma']['llm']['layers']['mlp']['linear'].value: (18, 16384, 2048)@float32
+['PaliGemma']['llm']['layers']['mlp_1']['gating_einsum'].value: (18, 2, 1024, 4096)@float32
+['PaliGemma']['llm']['layers']['mlp_1']['linear'].value: (18, 4096, 1024)@float32
+['PaliGemma']['llm']['layers']['pre_attention_norm']['scale'].value: (18, 2048)@float32
+['PaliGemma']['llm']['layers']['pre_attention_norm_1']['scale'].value: (18, 1024)@float32
+['PaliGemma']['llm']['layers']['pre_ffw_norm']['scale'].value: (18, 2048)@float32
+['PaliGemma']['llm']['layers']['pre_ffw_norm_1']['scale'].value: (18, 1024)@float32
+['action_in_proj']['bias'].value: (1024,)@float32
+['action_in_proj']['kernel'].value: (32, 1024)@float32
+['action_out_proj']['bias'].value: (32,)@float32
+['action_out_proj']['kernel'].value: (1024, 32)@float32
+['action_time_mlp_in']['bias'].value: (1024,)@float32
+['action_time_mlp_in']['kernel'].value: (2048, 1024)@float32
+['action_time_mlp_out']['bias'].value: (1024,)@float32
+['action_time_mlp_out']['kernel'].value: (1024, 1024)@float32
+['state_proj']['bias'].value: (1024,)@float32
+['state_proj']['kernel'].value: (32, 1024)@float32 (1709500:train.py:231)
+  0%|                                                                         | 0/30000 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/alex/pi0_hack/scripts/train.py", line 273, in <module>
+    main(_config.cli())
+  File "/home/alex/pi0_hack/scripts/train.py", line 254, in main
+    train_state, info = ptrain_step(train_rng, train_state, batch)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/pi0_hack/scripts/train.py", line 157, in train_step
+    loss, grads = nnx.value_and_grad(loss_fn, argnums=diff_state)(model, train_rng, observation, actions)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/pi0_hack/.venv/lib/python3.11/site-packages/flax/nnx/graph.py", line 1081, in update_context_manager_wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/alex/pi0_hack/.venv/lib/python3.11/site-packages/flax/nnx/transforms/autodiff.py", line 164, in grad_wrapper
+    fn_out = gradded_fn(*pure_args)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/pi0_hack/.venv/lib/python3.11/site-packages/flax/nnx/transforms/autodiff.py", line 86, in __call__
+    out = self.f(*args)
+          ^^^^^^^^^^^^^
+  File "/home/alex/pi0_hack/scripts/train.py", line 149, in loss_fn
+    chunked_loss = model.compute_loss(rng, observation, actions, train=True)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/pi0_hack/src/openpi/models/pi0.py", line 245, in compute_loss
+    observation = _model.preprocess_observation(preprocess_rng, observation, train=train)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/pi0_hack/src/openpi/models/model.py", line 177, in preprocess_observation
+    image = jax.vmap(augmax.Chain(*transforms))(sub_rngs, image)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alex/pi0_hack/.venv/lib/python3.11/site-packages/augmax/base.py", line 58, in __call__
+    except ValueError:
+  File "/home/alex/pi0_hack/.venv/lib/python3.11/site-packages/jax/_src/deprecations.py", line 54, in getattr
+    raise AttributeError(message)
+AttributeError: jax.tree_map was removed in JAX v0.6.0: use jax.tree.map (jax v0.4.25 or newer) or jax.tree_util.tree_map (any JAX version).
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.

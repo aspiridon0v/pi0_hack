@@ -17,10 +17,16 @@ import openpi.transforms as transforms
 
 class RemoveStrings(transforms.DataTransformFn):
     def __call__(self, x: dict) -> dict:
-        return {k: v for k, v in x.items() if not np.issubdtype(np.asarray(v).dtype, np.str_)}
+        return {
+            k: v
+            for k, v in x.items()
+            if not np.issubdtype(np.asarray(v).dtype, np.str_)
+        }
 
 
-def create_dataset(config: _config.TrainConfig) -> tuple[_config.DataConfig, _data_loader.Dataset]:
+def create_dataset(
+    config: _config.TrainConfig,
+) -> tuple[_config.DataConfig, _data_loader.Dataset]:
     data_config = config.data.create(config.assets_dirs, config.model)
     if data_config.repo_id is None:
         raise ValueError("Data config must have a repo_id")

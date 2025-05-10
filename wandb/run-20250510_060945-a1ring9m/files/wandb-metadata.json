@@ -1,0 +1,40 @@
+{
+  "os":  "Linux-5.19.0-1022-gcp-x86_64-with-glibc2.35",
+  "python":  "CPython 3.11.12",
+  "startedAt":  "2025-05-10T06:09:45.926328Z",
+  "args":  [
+    "pi0_libero",
+    "--exp-name=my_experiment",
+    "--overwrite"
+  ],
+  "program":  "-m scripts.train",
+  "git":  {
+    "remote":  "git@github.com:aspiridon0v/pi0_hack.git",
+    "commit":  "a4e7eccb1711d9ac892ef5d0243050715b9b1c02"
+  },
+  "email":  "aspiridonov@ethz.ch",
+  "root":  "/home/alex/pi0_hack",
+  "host":  "t1v-n-8219eed1-w-0",
+  "executable":  "/home/alex/pi0_hack/.venv/bin/python",
+  "cpu_count":  120,
+  "cpu_count_logical":  240,
+  "disk":  {
+    "/":  {
+      "total":  "103865303040",
+      "used":  "77075042304"
+    }
+  },
+  "memory":  {
+    "total":  "430004367360"
+  },
+  "cpu":  {
+    "count":  120,
+    "countLogical":  240
+  },
+  "tpu":  {
+    "name":  "v4",
+    "hbmGib":  32,
+    "devicesPerChip":  1,
+    "count":  1
+  }
+}
