@@ -9,12 +9,13 @@
             "name": "Python Debugger: Module",
             "type": "debugpy",
             "request": "launch",
-            "module": "scripts.compute_norm_stats",
+            "module": "scripts.viz_single",
             "env": {
                 "LEROBOT_HOME": "/mnt/disks/persist/hf_cache",
                 "HF_HOME": "/mnt/disks/persist/hf_cache"
             },
-            "args": ["--config-name", "pi0_libero"]
+            "justMyCode": false,
+            "args": ["pi0_agile_x", "--exp-name=agile_x", "--overwrite"]
         }
     ]
 }

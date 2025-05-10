@@ -585,9 +585,9 @@ _CONFIGS = [
     ),
     TrainConfig(
         name="pi0_agile_x",
-        model=pi0.Pi0Config(action_horizon=10),
+        model=pi0.Pi0Config(),
         data=LeRobotAgileXDataConfig(
-            repo_id="test/dummy_dataset",
+            repo_id="first/piper_dataset",
             base_config=DataConfig(
                 local_files_only=True,  # Set to True for local-only datasets.
                 # This flag determines whether we load the prompt (i.e. the task instruction) from the
