@@ -1,9 +1,0 @@
-{"time":"2025-05-10T05:56:09.520375975Z","level":"INFO","msg":"using version","core version":"0.19.1"}
-{"time":"2025-05-10T05:56:09.520389405Z","level":"INFO","msg":"created symlink","path":"/home/alex/pi0_hack/wandb/run-20250510_055609-nnqffkkl/logs/debug-core.log"}
-{"time":"2025-05-10T05:56:09.625116029Z","level":"INFO","msg":"created new stream","id":"nnqffkkl"}
-{"time":"2025-05-10T05:56:09.625159129Z","level":"INFO","msg":"stream: started","id":"nnqffkkl"}
-{"time":"2025-05-10T05:56:09.625182359Z","level":"INFO","msg":"handler: started","stream_id":"nnqffkkl"}
-{"time":"2025-05-10T05:56:09.625185199Z","level":"INFO","msg":"writer: Do: started","stream_id":"nnqffkkl"}
-{"time":"2025-05-10T05:56:09.625227099Z","level":"INFO","msg":"sender: started","stream_id":"nnqffkkl"}
-{"time":"2025-05-10T05:56:09.805557899Z","level":"INFO","msg":"Starting system monitor"}
-{"time":"2025-05-10T05:56:19.855935673Z","level":"ERROR","msg":"monitor: tpu: error sampling metrics: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:8431: connect: connection refused\""}
