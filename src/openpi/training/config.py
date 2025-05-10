@@ -421,11 +421,11 @@ class LeRobotAgileXDataConfig(DataConfigFactory):
 
         # TODO(karl): comment this out once we have updated the Libero checkpoints to not use
         # the delta action transform
-        # delta_action_mask = _transforms.make_bool_mask(6, -1)
-        # data_transforms = data_transforms.push(
-        #     inputs=[_transforms.DeltaActions(delta_action_mask)],
-        #     outputs=[_transforms.AbsoluteActions(delta_action_mask)],
-        # )
+        delta_action_mask = _transforms.make_bool_mask(6, -1)
+        data_transforms = data_transforms.push(
+            inputs=[_transforms.DeltaActions(delta_action_mask)],
+            outputs=[_transforms.AbsoluteActions(delta_action_mask)],
+        )
 
         # Model transforms include things like tokenizing the prompt and action targets
         # You do not need to change anything here for your own dataset.
@@ -516,7 +516,7 @@ class TrainConfig:
 
     @property
     def assets_dirs(self) -> pathlib.Path:
-        """Get the assets dir   ectory for this config."""
+        """Get the assets directory for this config."""
         return (pathlib.Path(self.assets_base_dir) / self.name).resolve()
 
     @property
