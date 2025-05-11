@@ -52,9 +52,15 @@ def main(data_directory, push_to_hub: bool = False):
     for episode in sorted(os.listdir(data_directory)):
         episode_path = os.path.join(data_directory, episode)
         if int(episode.split("_")[-1]) <= 10:
-            task = "pick up orange can"
-        else:
-            task = "pick up blue can"
+            task = "Pick up the orange can"
+        elif 11 <= int(episode.split("_")[-1]) <= 20:
+            task = "Pick up the blue can"
+        elif 21 <= int(episode.split("_")[-1]) <= 55 or 92 <= int(episode.split("_")[-1]) <= 100:
+            task = "Pick up the can of Red Bull"
+        elif 56 <= int(episode.split("_")[-1]) <= 64 or 75 <= int(episode.split("_")[-1]) <= 82:
+            task = "Pick up the can of Coca Cola"
+        elif 65 <= int(episode.split("_")[-1]) <= 74 or 83 <= int(episode.split("_")[-1]) <= 91:
+            task = "Pick up the can of Toni Mate"
         # Assert that the number of images in the folder wrist_images and the folder images are the same.
         wrist_images_path = os.path.join(episode_path, "wrist")
         images_path = os.path.join(episode_path, "exterior")
